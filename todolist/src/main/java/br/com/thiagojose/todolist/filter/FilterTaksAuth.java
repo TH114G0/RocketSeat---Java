@@ -11,12 +11,14 @@ import jakarta.servlet.ServletResponse;
 public class FilterTaksAuth implements Filter{
 
     @Override
-    public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
         throws IOException, ServletException {
         
 
         //Execute alguma ação
-        
+       System.out.println("Chegou no filtro");
+       chain.doFilter(request, response);
+       
     }
     
 }
